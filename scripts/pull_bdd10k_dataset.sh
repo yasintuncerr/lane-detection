@@ -56,7 +56,7 @@ download_url_list=(
     "https://dl.cv.ethz.ch/bdd100k/data/10k_images_train.zip"
     "https://dl.cv.ethz.ch/bdd100k/data/10k_images_val.zip"
     "https://dl.cv.ethz.ch/bdd100k/data/10k_images_test.zip"
-    "https://dl.cv.ethz.ch/bdd100k/data/10k_lane_labels_trainval.zip"
+    "https://dl.cv.ethz.ch/bdd100k/data/bdd100k_lane_labels_trainval.zip"
 )
 
 # Get the directory where this script is located
