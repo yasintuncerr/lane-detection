@@ -3,3 +3,8 @@ torch
 torchvision
 torchaudio
 transformers
+opencv-python
+ipykernel
+ipython
+scikit-learn
+matplotlib
