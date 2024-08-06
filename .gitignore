@@ -1,2 +1,8 @@
 **/datasets
 **/deeplr_venv
+**/*.safetensors
+**/config.json
+**/*.log
+**/*.jpg
+**/*.png
+**/*.pyc
