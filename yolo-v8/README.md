@@ -61,7 +61,7 @@ The following examples demonstrate how to use the script for testing with both a
 To process a single image using the YOLOv8 segmentation model, you can run the script as follows:
 
 ```bash
-python segmentation_script.py --model_path yolov8s-seg.pt --image_path path/to/your/image.jpg --output_dir output/results --yaml_path path/to/dataset.yaml
+python test.py --model_path yolov8s-seg.pt --image_path path/to/your/image.jpg --output_dir output/results --yaml_path path/to/dataset.yaml
 ```
 
 - `model_path`: Path to the YOLOv8 model. If you don't have a custom model, you can use a pretrained one like yolov8s-seg.pt.
@@ -74,7 +74,7 @@ python segmentation_script.py --model_path yolov8s-seg.pt --image_path path/to/y
 If you want to process all images in a directory, run the following command:
 
 ```bash
-python segmentation_script.py --model_path yolov8s-seg.pt --image_dir path/to/your/images/ --output_dir output/results --yaml_path path/to/dataset.yaml
+python test.py --model_path yolov8s-seg.pt --image_dir path/to/your/images/ --output_dir output/results --yaml_path path/to/dataset.yaml
 ```
 
 - `image_dir`: Path to the directory containing the images you want to process.
