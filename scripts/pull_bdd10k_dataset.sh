@@ -59,32 +59,26 @@ download_url_list=(
     "https://dl.cv.ethz.ch/bdd100k/data/bdd100k_lane_labels_trainval.zip"
 )
 
-# Get the directory where this script is located
-script_dir=$(dirname "$(readlink -f "$0")")
+# Ask user for the output directory
+read -p "Please enter the output directory for the dataset: " output_dir
 
-# Get the parent directory of the script directory
-parent_dir=$(dirname "$script_dir")
-
-# Directory to save the downloaded files
-datasets_dir="$parent_dir/datasets"
-
-# Check if the datasets directory exists
-if [ -d "$datasets_dir" ]; then
-    if [ -d "$datasets_dir/bdd100k/images/10k" ] || [ -d "$datasets_dir/bdd100k/labels" ]; then
+# Check if the output directory exists
+if [ -d "$output_dir" ]; then
+    if [ -d "$output_dir/bdd100k/images/10k" ] || [ -d "$output_dir/bdd100k/labels" ]; then
         echo "BDD100K dataset already exists. Checking for missing parts..."
         # Call the download script and check for missing parts
-        download_and_unzip "${download_url_list[@]}" "$datasets_dir"
+        download_and_unzip "${download_url_list[@]}" "$output_dir"
     else
         echo "BDD100K dataset does not exist. Downloading..."
         # Call the download script
-        download_and_unzip "${download_url_list[@]}" "$datasets_dir"
+        download_and_unzip "${download_url_list[@]}" "$output_dir"
     fi
 else
-    echo "datasets directory does not exist. Creating..."
-    mkdir -p "$datasets_dir"
+    echo "Output directory does not exist. Creating..."
+    mkdir -p "$output_dir"
     echo "BDD100K dataset does not exist. Downloading..."
     # Call the download script
-    download_and_unzip "${download_url_list[@]}" "$datasets_dir"
+    download_and_unzip "${download_url_list[@]}" "$output_dir"
 fi
 
 echo "Download, unzip, and cleanup completed."
