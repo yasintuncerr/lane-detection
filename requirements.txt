@@ -8,3 +8,4 @@ ipykernel
 ipython
 scikit-learn
 matplotlib
+ultralytics
