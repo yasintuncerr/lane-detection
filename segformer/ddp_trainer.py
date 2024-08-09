@@ -10,8 +10,6 @@ import argparse
 from tqdm import tqdm
 from PIL import Image
 
-upper_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(upper_dir)
 
 from utils.metrics import mean_iou
 from torch.utils.data import DataLoader

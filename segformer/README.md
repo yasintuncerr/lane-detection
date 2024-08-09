@@ -1,3 +1,30 @@
+
+
+# Training
+`ddp_tranier` and `trainer`script uses for training the model.
+
+arguments: 
+The following arguments are available for both trainers:
+
+ - `dataset_dir`: Path to the dataset directory.
+ - `batch_size`: Batch size for training (default: 12).
+ - `num_epochs`: Number of epochs to train for (default: 30).
+ - `learning_rate`: Learning rate for the optimizer (default: 5e-4).
+ - `num_warmup_steps`: Number of warmup steps for the learning rate scheduler (default: 500).
+ - `save_dir`: Directory to save the best model (default: ./segformer_model).
+ - `from_pretrained`: Path to the pretrained model directory.
+ - `n_gpus`: Number of GPUs to use (default: 1 for DDP, ignore for standard trainer).
+ - `log_name`: Name of the log file (default: segformer_ddp_training.log)
+
+** n_gpus available just in ddp version
+
+<br >
+
+<br >
+
+<br >
+
+
 # Testing the SegFormer-Lane-Marking Model
 
 for testing clone the preatrained  models from huggingface
